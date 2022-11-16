@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     STUDIO GHIBLI
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <!-- EMPLOYEE -->
+
+<div>
+  <ion-card *ngFor="let film of films">
+  <ion-card-header>
+    <img src="{{ film.image }}" />
+      <ion-card-title>{{ film.title }}</ion-card-title>
+      <ion-card-subtitle>{{ film.rt_score  }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ film.description }}
+        </ion-card-content>
+
+  
+  </ion-card>
+</div>
+</ion-content>
